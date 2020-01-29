@@ -33,25 +33,24 @@ yaml = ["yaml_config"]
 
 [dependencies]
 thiserror = "1.0.2"
-bufstream = "0.1"
 bytes = "0.5"
 chrono = "0.4"
 encoding = "0.2"
 irc-proto = { version = "*", path = "irc-proto" }
 log = "0.4"
 native-tls = "0.2"
-serde = { version = "1.0", features = ["derive"], optional = true }
-serde_derive = { version = "1.0", optional = true }
+parking_lot = "0.10.0"
 tokio = { version = "0.2.4", features = ["time", "net", "stream", "macros", "stream"] }
 tokio-util = { version = "0.2.0", features = ["codec"] }
 tokio-tls = "0.3.0"
+futures-channel = "0.3.1"
+futures-util = { version = "0.3.1", features = ["sink"] }
+
+serde = { version = "1.0", features = ["derive"], optional = true }
+serde_derive = { version = "1.0", optional = true }
 serde_json = { version = "1.0", optional = true }
 serde_yaml = { version = "0.8", optional = true }
 toml = { version = "0.5", optional = true }
-pin-utils = "0.1.0-alpha.4"
-parking_lot = "0.10.0"
-futures-channel = "0.3.1"
-futures-util = { version = "0.3.1", features = ["sink"] }
 
 [dev-dependencies]
 futures = "0.3.1"
